@@ -11,7 +11,7 @@
   <!-- configurations for modules -->
   <modules>
 		<module id="db" class="System.Data.TDataSourceConfig">
-			<database ConnectionString="mysql:host=localhost;dbname=hotel" Username="root" Password="jackass" />
+			<database ConnectionString="mysql:host=localhost;dbname=hotel" Username="root" Password="" />
 		</module>
 		
 		<module class="System.Data.ActiveRecord.TActiveRecordConfig" ConnectionID="db" /> 
@@ -68,7 +68,7 @@
     <parameter id="title" value="HOTEL" />
     <parameter id="dbname" value="hotel" />
 	<parameter id="dbuser" value="root" />
-	<parameter id="dbpass" value="jackass" />
+	<parameter id="dbpass" value="" />
   </parameters>
  <!-- -->
  

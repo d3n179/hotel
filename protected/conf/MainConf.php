@@ -3,7 +3,7 @@ class MainConf extends TPage
 {
 	public function queryAction($sql,$mode)
 	{
-		$conn = new TDbConnection("mysql:host=localhost;dbname="."hotel","root","jackass");				
+		$conn = new TDbConnection("mysql:host=localhost;dbname="."hotel","root","");				
 		$conn->Persistent=true;
 		$conn->Active=true;				
 		if($mode == "C")//Use this with INSERT, DELETE and EMPTY operation

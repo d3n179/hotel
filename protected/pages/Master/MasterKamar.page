@@ -1,0 +1,375 @@
+<com:TContent ID="Main">
+	<h2>Master Kamar</h2>
+	<hr>
+	 <com:TActivePanel CssClass="form"><!--form begin-->
+	<div class="modal fade" id="modal-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><com:TActiveLabel ID="modalJudul"/></h4>
+				</div>
+				
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Jenis Kamar</label>
+								<com:TActiveHiddenField ID="idKamar"/>
+								<com:TActiveDropDownList 
+									ID="DDJnsKamar"
+									Width="190px"
+									PromptText="--Pilih Jenis Kamar--"
+									PromptValue="empty"
+									AutoPostBack="false"
+									CausesValidation="true"
+									Enabled="true"
+									CssClass="form-control"
+									DataTextField="nama"
+									DataValueField="id">
+								</com:TActiveDropDownList>
+															
+								<com:TRequiredFieldValidator 
+									ControlToValidate="DDJnsKamar"											 
+									ErrorMessage=""
+									Display="Dynamic"
+									FocusOnError="true" 
+									CssClass="valRequired"
+									ControlCssClass="valctrl"
+									ValidationGroup="val" 
+									InitialValue="empty"/>
+							</div>	
+						</div>
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Nomor Kamar</label>
+								<com:TActiveTextBox 
+										ID="nomor_kamar" 
+										CssClass="form-control" 
+										Attributes.PlaceHolder="Nomor Kamar"/>
+										<com:TRequiredFieldValidator 
+										  ControlToValidate="nomor_kamar"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val" />
+							</div>	
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Lantai</label>
+								<com:TActiveTextBox 
+										ID="lantai" 
+										CssClass="form-control" 
+										Attributes.PlaceHolder="Lantai"/>
+										<com:TRequiredFieldValidator 
+										  ControlToValidate="lantai"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val" />
+							</div>	
+						</div>
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Blok</label>
+								<com:TActiveTextBox 
+										ID="blok" 
+										CssClass="form-control" 
+										Attributes.PlaceHolder="Blok"/>
+										<com:TRequiredFieldValidator 
+										  ControlToValidate="blok"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val"/>
+							</div>	
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Max Tamu</label>
+								<com:TActiveTextBox 
+										ID="max_tamu" 
+										CssClass="form-control" 
+										Attributes.PlaceHolder="Max Tamu"/>
+										<com:TRequiredFieldValidator 
+										  ControlToValidate="max_tamu"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val" />
+							</div>	
+						</div>
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Smoking</label>
+								<com:TActiveDropDownList 
+									ID="StSmoking"
+									PromptText="--Pilih Status--"
+									PromptValue="empty"
+									Width="190px"
+									AutoPostBack="false"
+									CausesValidation="true"
+									Enabled="true"
+									SelectedValue="0"
+									CssClass="form-control">
+									<com:TListItem Value="0" Text="Tidak"/>
+									<com:TListItem Value="1" Text="Ya"/>
+								</com:TActiveDropDownList>
+								
+										<com:TRequiredFieldValidator 
+										  ControlToValidate="StSmoking"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val" 
+										  InitialValue="empty" />
+							</div>	
+						</div>
+						
+					</div>
+					
+					<com:TActivePanel GroupingText="Bed Kamar">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Bed</label>
+								<com:TActiveHiddenField ID="idDetailKamar"/>
+								<com:TActiveDropDownList 
+									ID="DDBed"
+									Width="190px"
+									PromptText="--Pilih Bed--"
+									PromptValue="empty"
+									AutoPostBack="false"
+									CausesValidation="true"
+									Enabled="true"
+									CssClass="form-control"
+									DataTextField="nama"
+									DataValueField="id">
+								</com:TActiveDropDownList>
+								<com:TRequiredFieldValidator 
+										  ControlToValidate="DDBed"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val2" 
+										  InitialValue="empty" />
+							</div>	
+						</div>
+						
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="nama" class="control-label">Jumlah</label>
+								<com:TActiveTextBox 
+										ID="jml_bed" 
+										CssClass="form-control" 
+										Attributes.PlaceHolder="Jumlah Bed"/>
+										<com:TRequiredFieldValidator 
+										  ControlToValidate="jml_bed"											 
+										  ErrorMessage=""
+										  Display="Dynamic"
+										  FocusOnError="true" 
+										  CssClass="valRequired"
+										  ControlCssClass="valctrl"
+										  ValidationGroup="val2" />
+							</div>	
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<com:TActiveButton
+										ID="TambahBtn" 
+										Text="Tambah"
+										OnClick="tambahBtnClicked"
+										CausesValidation="true"
+										ValidationGroup="val2"
+										CssClass="btn btn-info">
+										 <prop:ClientSide 
+											OnLoading="loadContent();"
+											OnComplete="unloadContent();"/>
+									</com:TActiveButton>	
+							</div>	
+						</div>
+					</div>
+					
+					</com:TActivePanel>
+				</div>
+				
+				<div class="modal-footer">
+					<div class="row">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<com:TActiveButton
+										ID="submitBtn" 
+										Text="Submit"
+										OnClick="submitBtnClicked"
+										CausesValidation="true"
+										ValidationGroup="val"
+										CssClass="btn btn-info">
+										 <prop:ClientSide 
+											OnLoading="loadContent();"
+											OnComplete="unloadContent();"/>
+									</com:TActiveButton>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-3">
+			<div class="form-group">
+				<a href="javascript:;" onclick="jQuery('#modal-1').modal('show');jQuery('#<%= $this->modalJudul->getClientID()%>').text('Tambah Kamar');clearForm();" class="btn btn-info">Tambah</a>
+			</div>
+		</div>	
+	</div>	
+	<div class="row">	
+		<div class="col-md-12">
+	<div class="form-group">
+	<table class="table table-bordered table-striped datatable" id="table-1">
+			<thead>
+				<tr>
+					<th width="50px">No</th>
+					<th width="300px">Nomor Kamar</th>
+					<th width="300px">Jenis Kamar</th>
+					<th width="300px">Lantai</th>
+					<th width="300px">Blok</th>
+					<th width="300px">Max Tamu</th>
+					<th width="300px">Smoking Area</th>
+					<th width="150px">Aksi</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	</div>
+	</div>
+	</com:TActivePanel>	<!--form End-->
+	<com:TCallback ID="editCallback" OnCallback="editForm" ActiveControl.CausesValidation="false"/>
+	<com:TCallback ID="deleteCallback" OnCallback="deleteData" ActiveControl.CausesValidation="false"/>
+	
+	<script type="text/javascript">
+			jQuery(document).ready(function(jQuery)
+			{
+				jQuery('#<%= $this->max_tamu->getClientID()%>').numeric({ decimal : ".",  negative : false, scale: 4 });
+				jQuery('#<%= $this->blok->getClientID()%>').numeric({ decimal : ".",  negative : false, scale: 4 });
+				jQuery('#<%= $this->lantai->getClientID()%>').numeric({ decimal : ".",  negative : false, scale: 4 });
+				jQuery('#<%= $this->nomor_kamar->getClientID()%>').numeric({ decimal : ".",  negative : false, scale: 4 });
+				BindGrid();
+			});
+			
+			
+			function clearForm()
+			{
+				jQuery('#<%= $this->StSmoking->getClientID()%>').val('empty');
+				jQuery('#<%= $this->DDJnsKamar->getClientID()%>').val('empty');
+				jQuery('#<%= $this->max_tamu->getClientID()%>').val('');
+				jQuery('#<%= $this->blok->getClientID()%>').val('');
+				jQuery('#<%= $this->lantai->getClientID()%>').val('');
+				jQuery('#<%= $this->nomor_kamar->getClientID()%>').val('');
+				jQuery('#<%= $this->idKamar->getClientID()%>').val('');
+			}
+			
+			function BindGrid()
+			{
+				var responsiveHelper;
+				var breakpointDefinition = {
+					tablet: 1024,
+					phone : 480
+				};
+				var tableContainer;
+				tableContainer = jQuery("#table-1");
+				
+				tableContainer.dataTable({
+					"sPaginationType": "bootstrap",
+					"aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+					"bStateSave": true,
+					
+		
+				    // Responsive Settings
+				    bAutoWidth     : false,
+				    fnPreDrawCallback: function () {
+				        // Initialize the responsive datatables helper once.
+				        if (!responsiveHelper) {
+				            responsiveHelper = new ResponsiveDatatablesHelper(tableContainer, breakpointDefinition);
+				        }
+				    },
+				    fnRowCallback  : function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				        responsiveHelper.createExpandIcon(nRow);
+				    },
+				    fnDrawCallback : function (oSettings) {
+				        responsiveHelper.respond();
+				    }
+				});
+				
+				jQuery(".dataTables_wrapper select").select2({
+					minimumResultsForSearch: -1
+				});
+			}
+			
+			function editClicked(id)
+			{
+				if(confirm('Edit Data Ini ? '))
+				{
+					loadContent();
+					var request= <%= $this->editCallback->ActiveControl->Javascript %>;
+						request.setCallbackParameter({
+							id:id
+						});
+						request.dispatch();
+					
+				}
+				else
+				{
+					return false;
+				}
+			}
+			
+			function deleteClicked(id)
+			{
+				if(confirm('Hapus Data Ini ? '))
+				{
+					loadContent();
+					var request= <%= $this->deleteCallback->ActiveControl->Javascript %>;
+						request.setCallbackParameter({
+							id:id
+						});
+						request.dispatch();
+					
+				}
+				else
+				{
+					return false;
+				}
+			}
+			
+		</script>
+		
+</com:TContent>
